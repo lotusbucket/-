@@ -23,8 +23,9 @@ jobs:
         run: |
           mkdir -p public
           cp index.html forest.png mission.jpg mission.mp3 public/
-          cat bgm.part0 bgm.part1 bgm.part2 bgm.part3 > public/bgm.mp3
+          cat bgm.part?? > public/bgm.mp3
           test "$(wc -c < public/bgm.mp3)" -eq 75164278
+          echo "2748c09de83c6b0d0b544f5b7f8786a02ac391b58f4f7ef4538e168f6ab04790  public/bgm.mp3" | sha256sum -c -
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
