@@ -22,7 +22,7 @@ jobs:
       - name: Prepare game
         run: |
           mkdir -p public
-          cp index.html forest.png mission.jpg mission.mp3 public/
+          cp index.html forest.png mission.jpg mission.mp3 nook.png public/
           cat bgm.part?? > public/bgm.mp3
           test "$(wc -c < public/bgm.mp3)" -eq 75164278
           echo "2748c09de83c6b0d0b544f5b7f8786a02ac391b58f4f7ef4538e168f6ab04790  public/bgm.mp3" | sha256sum -c -
